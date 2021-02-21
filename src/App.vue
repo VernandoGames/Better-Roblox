@@ -41,12 +41,12 @@ export default {
     },
 
     created() {
-        document.addEventListener('swUpdated', this.swUpdated, { once: true });
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-            if (this.refreshing) return;
-            this.refreshing = true;
-            window.location.reload();
-        });
+        // document.addEventListener('swUpdated', this.swUpdated, { once: true });
+        // navigator.serviceWorker.addEventListener('controllerchange', () => {
+        //     if (this.refreshing) return;
+        //     this.refreshing = true;
+        //     window.location.reload();
+        // });
     },
 
     mounted() {
