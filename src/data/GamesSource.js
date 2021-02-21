@@ -9,7 +9,7 @@ const json = res => {
     return res.json();
 };
 
-const APIEndpoint = 'https://btr-rbx.herokuapp.com/app/'//process.env.NODE_ENV === 'production' ? 'https://cors-anywhere.herokuapp.com/' : ''
+const APIEndpoint = 'https://btr-rbx.herokuapp.com/'//process.env.NODE_ENV === 'production' ? 'https://cors-anywhere.herokuapp.com/' : ''
 
 export default new class GamesSource {
     constructor() {

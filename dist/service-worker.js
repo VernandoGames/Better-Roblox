@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.2f5affc10ffebdd8b7dfdc91bcb3baf3.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("/better-roblox/precache-manifest.462972f704187494462046195b44fce1.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 /* global workbox */
 
