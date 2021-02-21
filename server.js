@@ -8,8 +8,14 @@ const app = express();
 
 module.exports.app = app;
 
+const gamesRoutes = require('./routes/games-routes');
+const thumbnailRoutes = require('./routes/thumbnails-routes');
+
 app.use(bodyParser.json());
 // app.use(cors()) // for cross-origin rebasing. (development only)
+
+app.use('/api/games', gamesRoutes);
+app.use('/api/thumbnails', thumbnailRoutes);
 
 // Configure dist to serve app files
 app.use('/', serveStatic(path.join(__dirname, '/dist')))
