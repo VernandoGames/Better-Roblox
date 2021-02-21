@@ -1,0 +1,9 @@
+<svg viewBox="0 0 9 18">
+    <path 
+        stroke-linecap="round" 
+        d="m 7 1 -6 8 6 8" 
+        stroke="#fff" 
+        stroke-width=1 
+        fill="none"
+    />
+</svg>
