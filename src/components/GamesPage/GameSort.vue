@@ -204,6 +204,8 @@ export default {
         border-radius: 4px;
         align-items: center;
         display: flex;
+        cursor: pointer;
+        z-index: 2000;
     }
 
     #app.dark #arrow {
