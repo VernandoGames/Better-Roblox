@@ -20,7 +20,7 @@ export default new class GamesSource {
         const headers = new Headers();
         headers.set('Accept', 'application/json');
         const req = new Request(
-            APIEndpoint + 'games/games/sorts',
+            APIEndpoint + 'games/sorts',
             {
                 method: 'GET',
                 headers,
@@ -62,7 +62,7 @@ export default new class GamesSource {
         const headers = new Headers();
         headers.set('Accept', 'application/json');
         const req = new Request(
-            APIEndpoint + `games/games/list?token=${token}&gameSetTargetId=${targetId}&startRows=0&maxRows=32&hasMoreRows=true&sortPosition=0&pageContext.pageId=${pageId}`,
+            APIEndpoint + `games/list?token=${token}&gameSetTargetId=${targetId}&startRows=0&maxRows=32&hasMoreRows=true&sortPosition=0&pageContext.pageId=${pageId}`,
             {
                 method: 'GET',
                 headers,
