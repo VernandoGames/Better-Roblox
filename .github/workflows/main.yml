@@ -22,11 +22,30 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: Vue to Github Pages
-        # You may pin to the exact commit or the version.
-        # uses: xRealNeon/VuePagesAction@1fe4d0b38025bcbaafa71a359dd5c02f33bb03b7
-        uses: xRealNeon/VuePagesAction@1.0.0
-        with:
-          # Your Github token
-          token: $GITHUB_TOKEN
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          # abort on errors
+          set -e
+
+          # build
+          npm run build
+
+          # navigate into the build output directory
+          cd dist
+
+          # if you are deploying to a custom domain
+          # echo 'www.example.com' > CNAME
+
+          git init
+          git add -A
+          git commit -m 'deploy'
+
+          # if you are deploying to https://<USERNAME>.github.io
+          # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+
+          # if you are deploying to https://<USERNAME>.github.io/<REPO>
+          git push -f git@github.com:VernandoGames/Better-Roblox.git master:gh-pages
+
+          cd -
