@@ -82,6 +82,7 @@ export default new class GamesSource {
     }
 
     fetchGamesFromName(name) {
+        console.error("Don't use this!");
         const headers = new Headers();
         headers.set('Accept', 'application/json');
         const req = new Request(
