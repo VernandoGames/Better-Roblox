@@ -7,6 +7,9 @@
                 <router-link to="/avatar">Avatar Shop</router-link>
                 <router-link to="/develop">Create</router-link>
             </nav>
+            <nav v-show="isAuth">
+              
+            </nav>
         </container>
     </header>
 </template>
@@ -14,7 +17,7 @@
 <script>
     export default {
         name: 'navbar',
-        props: ['darkMode'],
+        props: ['darkMode', 'isAuth'],
     };
 </script>
 
