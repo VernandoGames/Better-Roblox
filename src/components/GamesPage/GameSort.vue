@@ -128,7 +128,7 @@ export default {
         this.loadGames();
         window.addEventListener('resize', this.calculateExtents);
     },
-    destroyed() {
+    unmounted() {
         window.removeEventListener("resize", this.calculateExtents);
     }
 }
@@ -205,7 +205,7 @@ export default {
         align-items: center;
         display: flex;
         cursor: pointer;
-        z-index: 2000;
+        z-index: 20;
     }
 
     #app.dark #arrow {

@@ -2,6 +2,9 @@ const webpack = require("webpack");
 
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? '/Better-Roblox/' : '/',
+    // devServer: {
+    //     host: 'vernandogames.github.io'
+    // },
     pwa: {
         name: 'Better Roblox',
         themeColor: '#33b5e5',

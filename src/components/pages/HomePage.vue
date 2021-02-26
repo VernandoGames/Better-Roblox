@@ -1,5 +1,5 @@
 <template lang="">
-    <div>
+    <div id='home-page'>
         <div v-if='isAuth'>
             <h3>Woah, You're signed in!</h3>
         </div>
@@ -14,6 +14,18 @@ export default {
     props: ['darkMode', 'isAuth'],
 }
 </script>
-<style lang="">
-    
+
+<style lang="scss">
+
+    @import '../../styles/theming';
+
+    #home-page {
+        background: $color-content-bg;
+    }
+
+    #app.dark #home-page {
+        background: $color-content-bg-dark;
+        color: $color-content-text-dark;
+    }
+
 </style>

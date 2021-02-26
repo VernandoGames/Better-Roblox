@@ -1,4 +1,6 @@
-import Vue from 'vue';
+// import Vue from 'vue';
+//vconst Vue = require('vue');
+import { h, createApp } from 'vue'
 
 import App from './App.vue';
 import VueCookies from 'vue-cookies';
@@ -10,21 +12,30 @@ import UnknownPageComponent from './components/UnknownPage.vue';
 import GameSortComponent from './components/GamesPage/GameSort.vue';
 import HorizontalScrollerComponent from './components/HorizontalScroller.vue';
 import 'vueperslides/dist/vueperslides.css'
+import Modal from './components/Modal.vue';
 
-Vue.config.productionTip = false;
+
+const app = createApp({render: () => h(App)})
+
+app.config.productionTip = false;
 //Vue.http.headers.common['Access-Control-Allow-Origin'] = '*'
 
 require('./styles/master.scss');
 
-Vue.component('container', ContainerComponent);
-Vue.component('slide', SlideComponent);
-Vue.component('unknown-page', UnknownPageComponent);
-Vue.component('game-sort', GameSortComponent);
-Vue.component('horizontal-scroller', HorizontalScrollerComponent);
+app.component('container', ContainerComponent);
+app.component('slide', SlideComponent);
+app.component('unknown-page', UnknownPageComponent);
+app.component('game-sort', GameSortComponent);
+app.component('horizontal-scroller', HorizontalScrollerComponent);
+app.component('modal', Modal);
 
-Vue.use(VueCookies);
+// Vue.use(VueCookies);
 
-new Vue({
-    router,
-    render: h => h(App),
-}).$mount('#app');
+
+app.use(router);
+app.mount('#app');
+
+// new Vue({
+//     router,
+//     render: h => h(App),
+// }).$mount('#app');
